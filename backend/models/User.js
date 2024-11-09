@@ -16,12 +16,6 @@ const userSchema = new mongoose.Schema({
         type: String, 
         required: true 
     },
-    targetLanguages: [String],
-    learningProgress: {
-        vocabulary: Number,
-        grammarLevel: Number,
-    },
-    chatHistory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chats' }], // Ensure the model name matches the one used in Chat.js
     isAdmin: { 
         type: Boolean, 
         required: true, 

@@ -2,11 +2,11 @@ import User from "../models/User.js";
 import bcryptjs from "bcryptjs";
 import asyncHandler from "../middlewares/asyncHandler.js";
 import createToken from "../utils/createToken.js";
-
 // @desc    Register a new user
 // @route   POST /api/users/register
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
+
     const { username, email, password } = req.body;
 
     // Check if all fields are filled
