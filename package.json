@@ -27,5 +27,8 @@
     "nodemon": "^3.1.7",
     "react-redux": "^9.1.2",
     "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
   }
 }

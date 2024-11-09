@@ -10,6 +10,10 @@ const alertSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
+    location: {
+        type: String,
+        required: false
+    },
     message: {
         type: String,
         required: true
