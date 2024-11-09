@@ -20,7 +20,8 @@ const userSchema = new mongoose.Schema({
         type: Boolean, 
         required: true, 
         default: false 
-    }
+    },
+    alerts: [{type: mongoose.Schema.Types.ObjectId, ref: 'Alerts'}],
 }, { timestamps: true });
 
 const User = mongoose.model('Users', userSchema);
