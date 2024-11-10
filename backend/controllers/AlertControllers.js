@@ -22,11 +22,12 @@ const getAllPersonalAlerts = asyncHandler(async (req, res) => {
 // @access Private
 
 const createAlert = asyncHandler(async (req, res) => {
-    const { type, dangerLevel, message } = req.body;
+    const { type, dangerLevel, location, message } = req.body;
 
     const alert = new Alert({
         type,
         dangerLevel: dangerLevel || 0,
+        location,
         message,
         userId: req.user._id
     });
@@ -87,7 +88,7 @@ const getAlertById = asyncHandler(async (req, res) => {
 // @route  GET /api/alerts/filter
 // @access Private
 const getFilteredAlert = asyncHandler(async (req, res) => {
-    const { type, dangerLevel, location, time } = req.query;
+    const { type, dangerLevel, location, time } = req.params;
     const query = {};
 
     if (type) {
