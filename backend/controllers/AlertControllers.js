@@ -1,8 +1,5 @@
-import User from "../models/User";
-import Alert from "../models/Alert";
-import bcryptjs from "bcryptjs";
-import asyncHandler from "../middlewares/asyncHandler";
-import createToken from "../utils/createToken";
+import Alert from "../models/Alert.js";
+import asyncHandler from "../middlewares/asyncHandler.js";
 
 // @desc   Get all Alerts
 // @route  GET /api/alerts/all
